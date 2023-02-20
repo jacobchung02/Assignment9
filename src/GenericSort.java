@@ -109,30 +109,40 @@ public class GenericSort
 
     public static void main(String[] args) throws Exception 
     {
-        // Using floats in this example. Works for other types, too.
-        ArrayList<Float> arrayList1 = new ArrayList<>();
-        ArrayList<Float> arrayList2 = new ArrayList<>();
+        // Create ArrayLists of types Float and Integer to show generics at work.
+        ArrayList<Float> floatList1 = new ArrayList<>();
+        ArrayList<Float> floatList2 = new ArrayList<>();
 
-        // Populating arrays based on type (Float). 
+        ArrayList<Integer> integerList1 = new ArrayList<>();
+        ArrayList<Integer> integerList2 = new ArrayList<>();
+
+        // Populating arrays.
         Random random = new Random();
         for (int i = 0; i < 10; i++)
         {
-            arrayList1.add(random.nextFloat(100));
-        }
+            floatList1.add(random.nextFloat(100));
+            floatList2.add(random.nextFloat(100));
 
-        for (int j = 0; j < 10; j++)
-        {
-            arrayList2.add(random.nextFloat(100));
+            integerList1.add(random.nextInt(100));
+            integerList2.add(random.nextInt(100));
         }
 
         // Print and display results of generic bubble sort.
-        System.out.println("Unsorted ArrayList to sort using bubble sort:\n" + arrayList1.toString());
-        bubbleSort(arrayList1);
-        System.out.println("Sorted ArrayList using bubble sort:\n" + arrayList1.toString() +"\n"); 
+        System.out.println("\n" + "Bubble sort: \n" + "Unsorted list of floats:\n" + floatList1.toString());
+        bubbleSort(floatList1);
+        System.out.println("Sorted list of floats:\n" + floatList1.toString() +"\n"); 
+
+        System.out.println("Unsorted list of integers:\n" + integerList1.toString());
+        bubbleSort(integerList1);
+        System.out.println("Sorted list of integers:\n" + integerList1.toString() +"\n");
 
         // Print and display results of generic merge sort.
-        System.out.println("Unsorted ArrayList to sort using merge sort:\n" + arrayList2.toString());
-        mergeSort(arrayList2);
-        System.out.println("Sorted ArrayList using merge sort:\n" + arrayList2.toString());    
+        System.out.println("Merge sort: \n"+ "Unsorted list of floats:\n" + floatList2.toString());
+        mergeSort(floatList2);
+        System.out.println("Sorted list of floats:\n" + floatList2.toString() + "\n");  
+        
+        System.out.println("Unsorted list of integers:\n" + integerList2.toString());
+        mergeSort(integerList2);
+        System.out.println("Sorted list of integers:\n" + integerList2.toString() +"\n");
     }
 }
