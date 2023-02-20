@@ -1,18 +1,5 @@
-## Getting Started
+## Generic Bubble and Merge Sort Implementation
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+The following program allows multiple types of objects to be sorted via generic bubble and merge sort methods. The example type used in the program is Float, but other types will also work. Bubble sort is essentially the same as the one created in lecture, while merge sort is my spin on one of the alternative methods we implemented in an earlier lecture.
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Running the code will print unsorted and sorted ArrayLists of type Float: one for bubble sort and one for merge sort. 
